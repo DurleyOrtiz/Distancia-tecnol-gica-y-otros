@@ -5,7 +5,7 @@ El resultado final es un nuevo `.zip` con todos los Excel **ordenados, renombrad
 
 ---
 
-## 🚀 ¿Qué hace el script?
+## ¿Qué hace el script?
 
 1. **Descomprime** un archivo ZIP que contiene hojas de cálculo Excel.
 2. **Procesa cada archivo Excel**:
@@ -16,7 +16,3 @@ El resultado final es un nuevo `.zip` con todos los Excel **ordenados, renombrad
 4. **Genera un nuevo ZIP** con todos los archivos ya organizados.
 
 ---
-
-## 📂 Entrada
-
-- Archivo ZIP con nombre definido en el script, por defecto:
