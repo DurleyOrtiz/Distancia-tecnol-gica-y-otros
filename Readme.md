@@ -1,32 +1,55 @@
-# Comparación de Perfiles con Prefijos Tecnológicos (DeTech)
+# 📂 Repositorio de  Perfiles Tecnológicos
 
-Este proyecto procesa y compara archivos Excel provenientes de dos conjuntos de datos (perfil_1.zip y perfil_2.zip), 
-con el objetivo de medir la similitud tecnológica entre ambos.
+Este repositorio se hizo con el propósito de que futuros ingenieros que quieran abordar este tema puedan guiarse de los códigos aquí presentados.  
+Cada script resuelve una parte del flujo de trabajo relacionado con la **organización, procesamiento y comparación de archivos Excel** que contienen información tecnológica.  
+
+A continuación, se listan los códigos incluidos hasta el momento, con una breve descripción de su propósito.  
+
+---
+
+## Códigos incluidos
+
+### 1) `excel_zip_sorter.py`
+Organiza un archivo `.zip` que contiene múltiples Excel.  
+- Descomprime los archivos.  
+- Elimina la primera fila de cada Excel y ordena la primera columna alfabéticamente.  
+- Renombra quitando el prefijo `resultados_`.  
+- Ordena los archivos por número y genera un nuevo ZIP con los resultados.  
 
 ---
 
-##  Flujo del código
-
-1. **Montaje y extracción**
-   - Monta Google Drive en Colab.
-   - Extrae los ZIP `Perfil_1.zip` y `perfil_2.zip` en carpetas temporales.
-
-2. **Procesamiento de archivos**
-   - Identifica los Excel cuyo nombre comienza con un índice (ej. `123_2002_Univ.xls`).
-   - Lee la columna **G** de cada archivo, que contiene códigos tecnológicos.
-   - Extrae los **prefijos tecnológicos** (ej. `"C12"`, `"A61"`).
-   - Cuenta la frecuencia de cada prefijo en cada archivo.
-
-3. **Generación de comparaciones**
-   - Para cada índice `1..348`, compara los archivos de `perfil_1` y `perfil_2`.
-   - Produce un archivo `comparacion_i.xlsx` con el conteo de prefijos lado a lado.
-
-4. **Empaquetado**
-   - Todos los `comparacion_*.xlsx` se comprimen en `comparaciones.zip`.
-
-5. **Cálculo de DeTech**
-   - Calcula la distancia tecnológica `DeTech_ij = 1 - cos(Xi, Xj)` entre los vectores de prefijos.
-   - Añade los resultados en una hoja `"DeTech"` dentro de cada Excel de comparación.
-   - Genera un archivo maestro `detech_resumen.xlsx` con todos los índices y sus métricas.
+### 2) `comparar_prefijos.py`
+Compara dos conjuntos de perfiles almacenados en ZIP.  
+- Extrae los archivos Excel de cada ZIP.  
+- Identifica los archivos por índice (ej. `23_2002_Univ.xls`).  
+- Lee la columna **G** y extrae los prefijos tecnológicos.  
+- Genera comparaciones `comparacion_i.xlsx` mostrando los conteos de prefijos en ambos perfiles.  
+- Empaqueta todos los resultados en un ZIP.  
 
 ---
+
+### 3) `calcular_detech.py`
+Calcula la métrica **DeTech_ij** (distancia tecnológica) a partir de las comparaciones generadas.  
+- Recorre los `comparacion_*.xlsx`.  
+- Calcula `DeTech_ij = 1 - cos(Xi, Xj)` usando los vectores de frecuencias.  
+- Inserta los resultados en una hoja `"DeTech"` dentro de cada Excel.  
+- Genera un archivo resumen `detech_resumen.xlsx` con todas las métricas consolidadas.  
+
+---
+
+## Futuras adiciones
+Este repositorio está en crecimiento.  
+Aquí se irán agregando nuevos códigos relacionados con:  
+- Procesamiento automatizado de datos tecnológicos.  
+- Nuevas métricas de comparación.  
+- Visualizaciones y reportes avanzados.  
+
+---
+
+## ⚙️ Dependencias generales
+Los scripts usan principalmente:  
+- `pandas`  
+- `numpy`  
+- `openpyxl`  
+- `xlrd`  
+- Librerías estándar de Python (`os`, `re`, `glob`, `zipfile`, `shutil`, `math`)  
