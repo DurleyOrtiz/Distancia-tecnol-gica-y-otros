@@ -3,8 +3,6 @@
 Este repositorio se hizo con el propósito de que futuros ingenieros que quieran abordar este tema puedan guiarse de los códigos aquí presentados.  
 Cada script resuelve una parte del flujo de trabajo relacionado con la **organización, procesamiento y comparación de archivos Excel** que contienen información tecnológica.  
 
-A continuación, se listan los códigos incluidos hasta el momento, con una breve descripción de su propósito.  
-
 ---
 
 ## Códigos incluidos
