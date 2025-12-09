@@ -33,14 +33,7 @@ Calcula la métrica **DeTech_ij** (distancia tecnológica) a partir de las compa
 - Inserta los resultados en una hoja `"DeTech"` dentro de cada Excel.  
 - Genera un archivo resumen `detech_resumen.xlsx` con todas las métricas consolidadas.  
 
----
 
-## Futuras adiciones
-Este repositorio está en crecimiento.  
-Aquí se irán agregando nuevos códigos relacionados con:  
-- Procesamiento automatizado de datos tecnológicos.  
-- Nuevas métricas de comparación.  
-- Visualizaciones y reportes avanzados.  
 
 ---
 
